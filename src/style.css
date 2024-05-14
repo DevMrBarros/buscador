@@ -1,0 +1,117 @@
+/* Estilo para o contêiner principal */
+.container {
+  height: 100vh; /* Define a altura como 100% da altura da tela */
+  display: flex; /* Usa flexbox para organização do conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  background: linear-gradient(
+    #121212,
+    #212b46
+  ); /* Fundo com gradiente linear */
+}
+
+/* Estilo para o título */
+.title {
+  font-size: 85px; /* Tamanho grande para o título */
+  color: #fff; /* Cor branca */
+  animation: flipTitle 2s; /* Animação de rotação */
+}
+
+/* Animação de rotação do título */
+@keyframes flipTitle {
+  from {
+    transform: rotateX(90deg); /* Rotação inicial de 90 graus */
+  }
+  to {
+    transform: rotateX(0deg); /* Rotação final de 0 graus */
+  }
+}
+
+/* Estilo para o contêiner de entrada */
+.container-input {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Fundo semi-transparente branco */
+  padding: 15px; /* Espaçamento interno */
+  margin: 34px 0; /* Margem superior e inferior */
+  display: flex; /* Usa flexbox */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Estilo para a entrada de texto dentro do contêiner de entrada */
+.container-input input {
+  background-color: transparent; /* Fundo transparente */
+  border: 0; /* Sem borda */
+  font-size: 20px; /* Tamanho da fonte */
+  color: #fff; /* Cor branca */
+  outline: none; /* Sem contorno ao focar */
+  margin-right: 8px; /* Margem à direita */
+}
+
+/* Estilo para o texto de placeholder da entrada de texto */
+.container-input input::placeholder {
+  color: #f1f1f1; /* Cor do texto do placeholder */
+}
+
+/* Estilo para o botão de pesquisa */
+.buttonSearch {
+  background-color: transparent; /* Fundo transparente */
+  border: 0; /* Sem borda */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  cursor: pointer; /* Mostra cursor ao passar */
+  transition: transform 0.5s; /* Transição de transformação */
+}
+
+/* Efeito de aumento do botão ao passar o mouse */
+.buttonSearch:hover {
+  transform: scale(1.2); /* Aumenta em 20% */
+}
+
+/* Estilo para o elemento principal da página */
+.main {
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  background-color: #ffffff; /* Fundo branco */
+  width: 500px; /* Largura fixa */
+  border-radius: 8px; /* Borda arredondada */
+}
+
+/* Estilo para o título dentro do elemento principal */
+.main h2 {
+  margin: 16px 0; /* Margem superior e inferior */
+  font-size: 39px; /* Tamanho da fonte */
+}
+
+/* Estilo para o texto span dentro do elemento principal */
+.main span {
+  margin-bottom: 16px; /* Margem inferior */
+  font-weight: bold; /* Negrito */
+}
+
+/* Media Query para telas menores que 720px */
+@media (max-width: 720px) {
+  /* Ajustes para o título em telas menores */
+  .title {
+    font-size: 60px; /* Tamanho menor */
+  }
+
+  /* Ajustes para o título h2 dentro do elemento principal */
+  .main h2 {
+    font-size: 28px; /* Tamanho menor */
+  }
+
+  /* Ajustes para o elemento principal em telas menores */
+  .main {
+    width: 80%; /* Largura reduzida */
+    min-height: 250px; /* Altura mínima */
+  }
+}
